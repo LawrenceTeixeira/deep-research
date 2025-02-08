@@ -91,7 +91,7 @@ function PureChatHeader({
         asChild
       >
         <Link
-          href="https://github.com/nickscamara/extract-chat"
+          href="https://github.com/LawrenceTeixeira/deep-research"
           target="_blank"
         >
           <span className="flex items-center gap-2">
