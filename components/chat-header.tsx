@@ -13,6 +13,7 @@ import { memo, useEffect } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { VisibilityType, VisibilitySelector } from './visibility-selector';
 import { useDeepResearch } from '@/lib/deep-research-context';
+import { Linkedin, Globe } from "lucide-react";
 
 function PureChatHeader({
   chatId,
@@ -85,58 +86,49 @@ function PureChatHeader({
         </Link>
       </Button> */}
 
-      <Button
-        variant="outline"
-        className="hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto"
-        asChild
+<Button
+      variant="outline"
+      className="hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto"
+      asChild
+    >
+      <Link
+        href="https://www.linkedin.com/mynetwork/discovery-see-all/?usecase=PEOPLE_FOLLOWS&followMember=lawrenceteixeira"
+        target="_blank"
       >
-        <Link
-          href="https://github.com/LawrenceTeixeira/deep-research"
-          target="_blank"
-        >
-          <span className="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            Star on GitHub
-          </span>
-        </Link>
-      </Button>
+        <span className="flex items-center gap-2">
+          <Linkedin size={16} />
+          Follow me on LinkedIn
+        </span>
+      </Link>
+    </Button>
 
-      <Button
-        variant="outline"
-        className="hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 "
-        asChild
+    <Button
+  variant="outline"
+  className="hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 "
+  asChild
+>
+  <Link href="https://lawrence.eti.br/" target="_blank">
+    <span className="flex items-center gap-2">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
-        <Link href="https://lawrence.eti.br/" target="_blank">
-          <span className="flex items-center gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
-            </svg>
-            Lawrence's Blog
-          </span>
-        </Link>
-      </Button>
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" />
+      </svg>
+      Lawrence's Blog
+    </span>
+  </Link>
+</Button>
+
     </header>
   );
 }
